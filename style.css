@@ -1,8 +1,8 @@
 @import url(variables.css);
 
 * {
-  box-sizing: border-box;
-  padding: 0;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 body,
@@ -23,47 +23,54 @@ nav {
   background-color: var(--primary-color);
   padding: 10px;
   color: white;
+  gap: 20px;
 }
 
 #nav-brand {
-  font-weight: bolder;
-  font-size: 2rem;
+    font-weight: bolder;
+    font-size: 2rem;
 }
 
 #nav-links {
-  display: flex;
-  flex-direction: row;
-  gap: 7%;
-  list-style-type: none;
-  font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7%;
+    list-style-type: none;
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 header {
-  background-image: url("https://loremflickr.com/cache/resized/65535_52145066049_32ab8234df_h_1200_300_nofilter.jpg");
-  background-size: cover;
-  min-height: 250px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+    background-image: url("https://loremflickr.com/320/240");
+    background-size: cover;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
-  color: white;
-  font-size: 3rem;
-  padding-bottom: 3.125rem;
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 0;
 }
 
-#aboutus > p {
-  color: black;
+#aboutus {
+    padding: 0 10px;
+}
+
+#aboutus>p {
+    color: black;
 }
 
 main {
-  max-width: 65ch;
-  margin: auto;
+    max-width: 65ch;
+    margin: auto;
 }
 
+
 /* une façon de faire. Il faut pour que cela s'applique mettre les bons id ou class au bon endroit */
+
 
 /* #features-section {
   display: grid;
@@ -85,12 +92,14 @@ main {
   grid-area: rightcol;
 } */
 
+
 /* #features-section > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 8%;
 } */
+
 
 #title-features{
   margin-left: .5rem;
@@ -110,17 +119,17 @@ article:first-of-type {
 }
 
 article {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 5px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
 }
 
-article > h3 {
-  padding-left: 0.5rem;
+article>h3 {
+    padding-left: 0.5rem;
 }
 
 footer {
@@ -129,6 +138,18 @@ footer {
   font-weight: bolder;
   padding: 1rem 0.5rem;
 }
+
+@media screen and (min-width: 568px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    #nav-links {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 0;
+        gap: 20px;
+    }
 
 @media screen and (min-width: 1200px) {
   .grid-wrapper {
